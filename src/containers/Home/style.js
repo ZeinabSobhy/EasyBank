@@ -1,10 +1,18 @@
 import makeStyles from '@material-ui/core/styles/makeStyles';
 
 export default makeStyles((theme) => ({
-	bhomecontenir: {
-		width: '1440px',
-  height: '4455px',
-  padding: '30px 0 100px',
-  backgroundColor: '#ffffff',
+	homecontenir: {
+		width: '100%',
+        height: '591vh',
+        //  padding: '30px 0 100px',
+        backgroundColor: '#ffffff',
+
+        [theme.breakpoints.down("xs")]: {
+            height: '821vh',
+            width:'100%',
+            padding: '50px 0 100px',
+            backgroundColor: '#ffffff',
+        }
+
 	},
 }));

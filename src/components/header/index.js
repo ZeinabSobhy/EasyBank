@@ -1,44 +1,50 @@
-import React, { useContext, useEffect, useState } from 'react';
-import makeStyles from './style';
-import { useTheme } from '@material-ui/core/styles';
-import LOGOEA from '../../assets/images/logo-ea.svg';
-import { Grid } from '@material-ui/core';
-import { useMediaQuery,Button, } from '@material-ui/core';
-import ResonsiveImage from '../../components//ResponsiveImage//index';
+import React, { useContext, useEffect, useState } from "react";
+import makeStyles from "./style";
+import { useTheme } from "@material-ui/core/styles";
+import LOGOEA from "../../assets/images/logo-ea.svg";
+import { Grid, Typography } from "@material-ui/core";
+import { useMediaQuery, Button } from "@material-ui/core";
 
+const Header = () => {
+  const classes = makeStyles();
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
-const Header = () =>{
-    const classes = makeStyles();
-	const theme = useTheme();
-    const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  return (
+    <div className={classes.root}>
+      <Grid container >
+        <Grid item xs={12} sm={12} lg={12}></Grid>
+    <Grid  item xs={12} sm={12} lg={12} className={classes.HeaderContainer} 
+     style={{
+      
+      width: isSmallScreen && "100%",
+      height: isSmallScreen && "175px",
+    }}>
     
 
-    return(
-        <div className={classes.HeaderContainer}>
-                {!isSmallScreen && (
-					<Grid  className={classes.logoea}>
-                        <div>
-                        <img src={LOGOEA} className={classes.logoea} alt="Test" />
-                        </div>
-                        
-					</Grid>
-				)}
-                <div className={classes.langughBtn}>
-						<Button
-							variant="contained"
-                            size="small"
-                            color="secondary"
-							
-							className={classes.btn}
-						>
-							العربيه
-						</Button>
-					</div>
+      <div className={classes.logoea}>
+        <img
+          style={{
+            cursor: "pointer",
+            width: isSmallScreen && "242px",
+            height: isSmallScreen && "75px",
+          }}
+          src={LOGOEA}
+          alt="logo"
+        />
+      </div>
 
-            
-
-        </div>
-
-    );
-}
+      <div>
+        <Button 
+         className={classes.btn}>
+          <Typography className={classes.textbtn}>العربيه</Typography>
+        </Button>
+      </div>
+    </Grid>
+    </Grid>
+    
+    </div>
+    
+  );
+};
 export default Header;
