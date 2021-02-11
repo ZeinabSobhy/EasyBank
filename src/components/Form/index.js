@@ -17,11 +17,14 @@ import { useTheme } from "@material-ui/core/styles";
 import VIDEO from "../../assets/vido/Emirates Auction.mp4";
 import poster from "../../assets/images/poster.jpg";
 import { DataContext } from "../../context/dataContext";
+import { useMediaQuery} from "@material-ui/core";
 import { Select, MenuItem, FormControl, InputLabel } from "@material-ui/core";
 
 export default function Form() {
   const classes = makeStyles();
   const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.only("sm"));
+  const isXSmallScreen = useMediaQuery(theme.breakpoints.down("xs"));
   const [MakeModels, SetMakeModels] = useContext(DataContext);
   const [Models, setModels] = useState([]);
   const [filtered, setFiltered] = useState([]);
@@ -52,7 +55,8 @@ export default function Form() {
   };
   // <VideoPlayer url={VIDEO} poster={poster} width={400} height={300} autoplay />;
   return (
-    <Grid container component="main" className={classes.root}>
+    <Grid container  item sm={isSmallScreen ? '6' : '12'} >
+    <Grid  component="main" className={classes.root} item xs={isXSmallScreen ? '12' :'6'}>
       <Grid xs={12} className={classes.title}>
         <Typography className={classes.firstTitle}>Start today!</Typography>
         <Typography className={classes.scondTitle}>
@@ -139,6 +143,7 @@ export default function Form() {
             </Button>
           </form>
         </div>
+      </Grid>
       </Grid>
     </Grid>
   );

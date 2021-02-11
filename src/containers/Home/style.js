@@ -9,10 +9,17 @@ export default makeStyles((theme) => ({
 
         [theme.breakpoints.down("xs")]: {
             height: '821vh',
-            width:'100%',
+            width:'740px',
             padding: '50px 0 100px',
             backgroundColor: '#ffffff',
+        },
+        [theme.breakpoints.down("sm")]: {
+            width: '100%',
+        height: '591vh',
+
         }
 
 	},
-}));
+}),
+{ index: 1 }
+);

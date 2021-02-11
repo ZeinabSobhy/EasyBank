@@ -3,39 +3,63 @@ export default makeStyles( (theme) => ({
     root:{
         width: '100% !important',
         height: '93vh',
-        marginLeft: '-100px',
-        padding: '133px 0px 269px 100px !important',
-        objectFit: 'contain',
+        padding: '0px 0px 269px 0px !important',
         borderRadius: 'unset !important',
-        display:'flix',
-		position: 'absolute',
-        
-    },
-   
+		display: 'flex !important',
+        objectFit: 'contain',
+        backgroundSize: "cover",
+        marginTop: '-47px  !important',
+        margin: theme.spacing(0, 0),
+
+                [theme.breakpoints.down('xs')]:{
+                    width: '949px !important',
+                    height: '93vh',
+                    padding: '433px 0px 269px 0px !important',
+                    display: 'flex !important',
+                    objectFit: 'contain',
+                    backgroundSize: "cover",
+                },
+
+                [theme.breakpoints.only('sm')]:{
+        width: '100% !important',
+        height: '93vh',
+        padding: '297px 0px 269px 0px !important',
+        borderRadius: 'unset !important',
+		display: 'flex !important',
+        objectFit: "contain",
+        textAlign: "center",
+        backgroundSize: "cover",
+				margin: theme.spacing(0),
+
+                },
+
+
+				
+		},
+
     paper:{
-        display:'flix',
-		position: 'absolute',
+        display:'flex',
         width: ' 760px !important',
         objectFit: 'contain',
         float: 'right',
         backgroundSize: 'cover',
-        marginLeft: '759px',
         height: '703px !important',  
-        marginTop: '-703px',
         borderRadius: 'unset !important',
+        padding: theme.spacing(0,0),
 
         [theme.breakpoints.down("xs")]: {
-         display:'flix',
-		position: 'absolute',
-        width: ' 194% !important',
-        objectFit: 'contain',
-        padding: '31px 109px 100px 110px',
-        backgroundSize: 'cover',
-        height: '703px !important',  
-        margin: '0px 0 10px',
-        borderRadius: 'unset !important',
+         display:'flex',
+        width: ' 977px !important',
+        objectFit: 'contain !important',
+        backgroundSize: 'cover !important',
+        height: '508px !important', 
+        marginTop:'395px !important', 
 
-        }
+        },
+        [theme.breakpoints.only("sm")]: {
+            width: '  1142px !important',
+            marginLeft: '676px',
+        },
        
     },
     paper2:{
@@ -44,20 +68,46 @@ export default makeStyles( (theme) => ({
        backgroundColor: '#323e47',
        borderRadius: 'unset !important',
        flost:'right',
+       display:'flex',
+       position: 'absolute',
+       padding: theme.spacing(0),
+       [theme.breakpoints.down("xs")]: {
+        width: ' 975px !important',
+        height: '682px !important',
+        margin: '-287px 1px 0',
+       },
+
+       [theme.breakpoints.only("sm")]: {
+        width: ' 1000px !important',
+        padding:' 0px 0px 0px 0px',
+    },
  
+       
         
 
     },
 
     ContainerBidandText:{
-        margin: '284PX 122px 10px',
+        padding:'284PX 122px 10px',
+
+        [theme.breakpoints.down("xs")]: {
+        padding:' 144PX 227px 10px'
+    },
+
+        
+       [theme.breakpoints.only("sm")]: {
+        padding:'284PX 311px 10px'},
+    
+       
 
     },
     BidIcon:{
         width: '59px',
         height: '60px',
-        margin: '0 231px 30px',
+        padding:'0 231px 30px',
         objectFit: 'contain',
+       
+        
         
 
     },
@@ -65,7 +115,7 @@ export default makeStyles( (theme) => ({
     firsttext:{
         width: '495px',
         height: '39px',
-        margin: '30px 13px 10px',
+        padding:'30px 13px 10px',
         fontFamily: 'inherit',
         fontSize: '27px',
         fontWeight: 'bold',
@@ -75,12 +125,19 @@ export default makeStyles( (theme) => ({
         letterSpacing: '-0.63px',
         textAlign: 'center',
         color: '#ffffff',
+        [theme.breakpoints.down("xs")]: {
+            fontSize: '29px',
+            padding:'30px 13px 10px',
+            width: '529px',
+            marginLeft: '-32px',
+
+        },
 
     },
     Secondtext:{
         width: '521px',
   height: '26px',
-  margin: '10px 0 0',
+  padding:  '10px 0 0',
   fontFamily: 'inherit',
   fontSize: '20px',
   fontWeight: '500',
@@ -90,10 +147,16 @@ export default makeStyles( (theme) => ({
   letterSpacing: '-0.42px',
   textAlign: 'center',
   color: '#ffffff',
+  [theme.breakpoints.down("xs")]: {
+    fontSize: '20px',
+    width: '529px',
+    marginLeft: '-32px',
+
+},
     },
     containerSteps:{
         display:'flix',
-		position: 'absolute',
+        marginTop: '-14px'
 
     },
    
@@ -103,6 +166,13 @@ export default makeStyles( (theme) => ({
         marginTop: '150px',
         marginLeft:'146px',
         marginRight: '159px',
+        [theme.breakpoints.down("xs")]: {
+            display:'flix',
+            position: 'absolute',
+            marginTop: '150px',
+            marginLeft:'146px',
+            marginRight: '159px',
+        },
        
 
     },
@@ -137,7 +207,7 @@ export default makeStyles( (theme) => ({
         fontStyle: 'normal',
         textAlign: 'center',
         color: '#ffffff',
-        marginTop: '280px',
+        marginTop: '275px',
         marginLeft: '210px',
     },
     textStepOne:{
@@ -218,22 +288,45 @@ export default makeStyles( (theme) => ({
         margin: '8px 0 0',
         fontSize: '14px',
         fontWeight: 'normal',
-       
         lineHeight: '1.29',
         letterSpacing: 'normal',
-        
+    },
+    textStepthird2:{
+        width: '298px',
+        height: '48px',
+        margin: '-19px 0 0',
+        fontSize: '14px',
+        fontWeight: 'normal',
+        lineHeight: '1.29',
+        letterSpacing: 'normal',
 
     },
-    NumberCircle:{
-        width: '50px',
-  height: '50px',
-  margin: '8px 20px 7px 0',
-  padding: '13px 18px',
+    NumberCircle1:{
+      
+  height: '51px',
+  width: '51px',
   borderRadius: '67px',
+  marginLeft: '-64px',
+  bottom: '-47px',
   boxShadow: '20px 20px 60px 0 rgba(0, 0, 0, 0.4)',
   backgroundImage: 'linear-gradient(225deg, #ec1c24, #f91c3d)',
     },
-    
+    NumberCircle:{
+      
+        height: '51px',
+        width: '51px',
+        borderRadius: '67px',
+        marginLeft: '-64px',
+        boxShadow: '20px 20px 60px 0 rgba(0, 0, 0, 0.4)',
+        backgroundImage: 'linear-gradient(225deg, #ec1c24, #f91c3d)',
+          },
+       
+              containersteptwo:{
+                marginTop: '-50px',
+              },
+              
 
 
-}));
+            }),
+            { index: 1 }
+            );

@@ -8,18 +8,20 @@ import { useMediaQuery, Button } from "@material-ui/core";
 const Header = () => {
   const classes = makeStyles();
   const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const isSmallScreen = useMediaQuery(theme.breakpoints.only("sm"));
+  const isXSmallScreen = useMediaQuery(theme.breakpoints.down("xs"));
 
   return (
-    <div className={classes.root}>
-      <Grid container >
-        <Grid item xs={12} sm={12} lg={12}></Grid>
-    <Grid  item xs={12} sm={12} lg={12} className={classes.HeaderContainer} 
+    <Grid className={classes.root} container  item sm={isSmallScreen ? '12' : '12'}>
+      <Grid item xs={isXSmallScreen ? '12' :'12'} >
+       
+     
+  <Grid   className={classes.HeaderContainer} 
      style={{
       
       width: isSmallScreen && "100%",
       height: isSmallScreen && "175px",
-    }}>
+      }}>
     
 
       <div className={classes.logoea}>
@@ -43,7 +45,7 @@ const Header = () => {
     </Grid>
     </Grid>
     
-    </div>
+    </Grid>
     
   );
 };

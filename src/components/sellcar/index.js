@@ -9,10 +9,12 @@ const SellCar = () => {
   const classes = makeStyles();
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const isXSmallScreen = useMediaQuery(theme.breakpoints.down("xs"));
+  
   return (
     <div className={classes.root}>
-    <Grid container >
-        <Grid item xs={12} sm={12} lg={12} className={classes.Continer}>
+    <Grid container item sm={isSmallScreen ? '12' : '12'}>
+        <Grid  className={classes.Continer} item xs={isXSmallScreen ? '12' :'12'}>
           <div
             className={classes.imgcontiner}
             style={{

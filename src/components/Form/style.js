@@ -1,11 +1,14 @@
 import makeStyles from '@material-ui/core/styles/makeStyles';
 export default makeStyles((theme) => ({
     root: {
-      height: '100vh',
-      marginTop: '835px',
-      display:'flix',
-		position: 'absolute',
-      
+      height: '100vh !important',
+      padding: '150px 0 0 0px !important',
+      display:'flix !important',
+      objectFit: "contain",
+      fontStretch: "normal",
+      fontStyle: "normal",
+      lineHeight: "normal",
+      letterSpacing: "normal",
     },
     firstTitle:{
  width: '175px',
@@ -56,7 +59,7 @@ export default makeStyles((theme) => ({
         margin: '1026px 0 50px',
         padding: '140px 255px',
         mixBlendMode: 'hard-light',
-        position:'absolute',
+        
        },
 
 
@@ -87,7 +90,7 @@ export default makeStyles((theme) => ({
   
     form: {
       width: '510px', 
-      position: 'absolute',
+     
       marginTop: '-473px',
       paddingLeft: '112px',
       

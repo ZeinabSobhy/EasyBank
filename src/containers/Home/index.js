@@ -12,6 +12,7 @@ function Home() {
   const classes = makeStyles();
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  
   return (
     <Grid   className={classes.homecontenir} style={{
             width: isSmallScreen && "100%",
