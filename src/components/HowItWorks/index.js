@@ -6,6 +6,7 @@ import { useMediaQuery, Button } from "@material-ui/core";
 import IMGRED from "../../assets/images//red-bg.png";
 import BID_ICON from "../../assets/icons/bid-icon.png";
 import Avatar from '@material-ui/core/Avatar';
+import { FormattedMessage } from "react-intl";
 
 const HowItWorks = () => {
   const classes = makeStyles();
@@ -30,9 +31,10 @@ const HowItWorks = () => {
          
               <Grid item xs={12} sm={6} lg={6} className={classes.containerTitle}>
               
-                <Typography className={classes.title}>How it works?</Typography>
+                <Typography className={classes.title}>
+                <FormattedMessage id="howItWorks.title" /></Typography>
                 <Typography className={classes.Secondtitle}>
-                  Sell Your Car in Three Simple Steps
+                <FormattedMessage id="howItWorks.subtitle" />
                 </Typography>
               </Grid>
               <div  >
@@ -46,10 +48,10 @@ const HowItWorks = () => {
           </Avatar>
         
                   <Typography className={classes.textStepOne}>
-                    Submit Your Car
+                  <FormattedMessage id="howItWorks.firstPoint.title" />  
                   </Typography>
                   <Typography className={classes.textStep1}>
-                    Enter your car details for inspection on Emirates Auction.
+                  <FormattedMessage id="howItWorks.firstPoint.subtitle" />  
                   </Typography>
                 </div>
 
@@ -60,11 +62,10 @@ const HowItWorks = () => {
                 </Avatar>
         <div className={classes. containersteptwo}>
                   <Typography className={classes.textSteptwo}>
-                    Receive Valuation and Offer
+                  <FormattedMessage id="howItWorks.secondPoint.title" />  
                   </Typography>
                   <Typography className={classes.textStep2}>
-                    We will check your car and provide you with approved
-                    purchase price.
+                  <FormattedMessage id="howItWorks.secondPoint.subtitle" /> 
                   </Typography>
                   </div>
                 </div>
@@ -76,14 +77,14 @@ const HowItWorks = () => {
           <div className={classes. containersteptwo}>
        
                   <Typography className={classes.textStepthird}>
-                    Get Your Payment
+                  <FormattedMessage id="howItWorks.thirdPoint.title" />
                   </Typography>
                   <Typography className={classes.textStep3}>
-                    After a price is agreed for your car,
+                  <FormattedMessage id="howItWorks.thirdPoint.subtitle" />
                      
                   </Typography>
-                  <Typography className={classes.textStepthird2}>we will exchange cash
-                    on a day that suits you.</Typography>
+                  <Typography className={classes.textStepthird2}>
+                  <FormattedMessage id="howItWorks.thirdPoint.subtitle2" /></Typography>
                   </div>
                 </div>
               </div>
@@ -119,11 +120,10 @@ const HowItWorks = () => {
               </div>
               <Typography className={classes.containerText}>
                 <Typography className={classes.firsttext}>
-                  YOUR CAR WILL BE SOLD BY BIDDING
+                <FormattedMessage id="bidding.title" />
                 </Typography>
                 <Typography className={classes.Secondtext}>
-                  You set the starting price it will be sold for the highest
-                  bidder{" "}
+                <FormattedMessage id="bidding.subtitle" />{" "}
                 </Typography>
               </Typography>
             </div>

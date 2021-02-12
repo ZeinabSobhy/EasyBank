@@ -1,15 +1,26 @@
 import makeStyles from '@material-ui/core/styles/makeStyles';
 export default makeStyles((theme) => ({
-    root: {
+    roott: {
       height: '100vh !important',
-      padding: '150px 0 0 0px !important',
+      padding: '0px 0 0 0px !important',
+      marginTop: '-251px',
       display:'flix !important',
       objectFit: "contain",
       fontStretch: "normal",
       fontStyle: "normal",
       lineHeight: "normal",
       letterSpacing: "normal",
+      width:'100%',
     },
+    title:{
+      [theme.breakpoints.down("xs")]: {
+   
+        marginLeft: '-214px',
+        padding:' 50px 0 0 0',
+       },
+
+    },
+
     firstTitle:{
  width: '175px',
   height: '46px',
@@ -24,6 +35,22 @@ export default makeStyles((theme) => ({
   letterSpacing: '-0.73px',
   textAlign: 'center',
   color: '#000000',
+  [theme.breakpoints.down("xs")]: {
+  //   width: '175px',
+  // height: '46px',
+  padding:'210px 0 0 0px',
+  // margin: '0 95px 10px;',
+  fontFamily: 'initial',
+  fontSize: '35px',
+  fontWeight: 'bold',
+  fontStretch: 'normal',
+  fontStyle: 'normal',
+  lineHeight:' normal',
+  letterSpacing: '-0.73px',
+  textAlign: 'center !important',
+  color: '#000000',
+        
+      },
 
     },
     scondTitle:{
@@ -49,21 +76,84 @@ export default makeStyles((theme) => ({
     },
     video: {
       backgroundColor: '#ffffff',
-       padding: '30px 0px 100px 153px',
+       padding: '0 0px 73px 133px',
        paddingTop: '0px',
-
-
+       width:' 560px',
+       height: '330px',
+    
        [theme.breakpoints.down("xs")]: {
         width: '560px',
-        height: '330px',
-        margin: '1026px 0 50px',
-        padding: '140px 255px',
-        mixBlendMode: 'hard-light',
+        height: '780px',
+        padding: '4px 194px',
+        
         
        },
-
-
     },
+      zeinab:{
+        width: '460px',
+        height: '50px',
+        margin: '49px 0 0',
+        padding: '15px 33px 14px 30px',
+        borderRadius: '5px',
+        border: 'solid 1px #bfc4ce',
+        backgroundColor: '#ffffff',
+       },
+    sellcarwithus:{
+      width: '458px',
+      height: '37px',
+      margin: '40px 56px 10px 0',
+      fontFamily: 'systemUi',
+      fontSize: '26px',
+      fontWeight: 'bold',
+      fontStretch: 'normal',
+      fontStyle:' normal',
+      lineHeight: 'normal',
+      letterSpacing: '-0.58px',
+      color:' #000000',
+
+     },
+     support:{
+      width: '272px',
+      height: '24px',
+      margin: '10px 233px 30px 0',
+      fontFamily:' Roboto',
+      fontSize: '18px',
+      fontweight: '500',
+      fontStretch: 'normal',
+      fontStyle:' normal',
+      lineHeight: 'normal',
+      letterSpacing:' -0.37px',
+      color: '#595f6f',
+
+     },
+     process:{
+      width: '505px',
+      height: '42px',
+      margin: '-3 0 20px',
+      fontFamily:' Roboto',
+      fontweight: '16px',
+      fontweight: 'normal',
+      fontStretch: 'normal',
+      fontStyle:' normal',
+      lineHeight: 'normal',
+      letterSpacing:' -0.33px',
+      color: '#595f6f',
+
+     },
+     Ready:{
+      width: '154px',
+      height: '21px',
+      margin: '20px 351px 0 0',
+      fontFamily: 'Roboto',
+      fontSize: '16px',
+      fontWeight: '500',
+      fontStretch: 'normal',
+      fontStyle: 'normal',
+      lineHeight: 'normal',
+      letterSpacing: '-0.33px',
+      color: '#595f6f',
+     },
+
     paper: {
       margin: theme.spacing(8, 4),
       float: 'right',
@@ -71,19 +161,30 @@ export default makeStyles((theme) => ({
       alignItems: 'center',
     },
     details:{
-        width: '156px',
-        height: '26px',
-        marginTop: '-3px',
-       
+        width: '156px !important',
+        height: '26px !important',
+        marginTop: '-3px!important',
         fontFamily: 'Roboto',
-        fontSize: '20px',
-        fontWeight: '500',
+        fontSize: '20px !important',
+        fontWeight: '500 !important',
         fontStretch: 'normal',
         fontStyle: 'normal',
         lineHeight: 'normal',
         letterSpacing: '-0.71px',
-        color:' #595f6f',
-     
+        color:' #595f6f !important',
+    },
+    contactInfo:{
+      width:' 231px',
+  height:' 26px',
+  margin: '30px 229px 30px 0',
+  fontFamily: 'fangsong',
+  fontSize: '20px',
+  fontWeight:' 500',
+  fontStretch: 'normal',
+  fontStyle: 'normal',
+  lineHeight: 'normal',
+  // letterSpacing: '-0.71px',
+  color: '#595f6f',
 
     },
    
@@ -92,7 +193,7 @@ export default makeStyles((theme) => ({
       width: '510px', 
      
       marginTop: '-473px',
-      paddingLeft: '112px',
+      paddingLeft: '532px',
       
 
     },
@@ -103,7 +204,15 @@ export default makeStyles((theme) => ({
       variant:"outlined",
     },
     submit: {
+      width:' 203px',
+      height: '50px',
       margin: theme.spacing(3, 0, 2),
+      backgroundColor: "#ec1c24 !important",
+      color: "#fff !important",
+      boxShadow: "0 2px 7px 0 rgba(255, 0, 0, 0.19)!important",
+      "&:hover": {
+        backgroundColor: "#ec1c24 !important",
+        color: "#fff !important"}
     },
   }));
   

@@ -27,10 +27,10 @@ export default makeStyles((theme) => ({
     backgroundSize: "cover",
 
     [theme.breakpoints.down("xs")]: {
-      width: "766px !important",
-      marginTop:'-31px',
+      width: "792px !important",
+      marginTop:'-32px',
       margin: "0 -430px 3px",
-      padding: "23px 394px 166px 244px",
+      padding: "23px 402px 173px 244px",
       objectFit: "contain",
       backgroundSize: "cover",
       textAlign: "center",

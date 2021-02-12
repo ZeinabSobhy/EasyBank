@@ -49,11 +49,11 @@ export default makeStyles( (theme) => ({
 
         [theme.breakpoints.down("xs")]: {
          display:'flex',
-        width: ' 977px !important',
+        width: ' 1006px !important',
         objectFit: 'contain !important',
         backgroundSize: 'cover !important',
         height: '508px !important', 
-        marginTop:'395px !important', 
+        marginTop:'432px !important', 
 
         },
         [theme.breakpoints.only("sm")]: {
@@ -72,9 +72,9 @@ export default makeStyles( (theme) => ({
        position: 'absolute',
        padding: theme.spacing(0),
        [theme.breakpoints.down("xs")]: {
-        width: ' 975px !important',
+        width: ' 1005px !important',
         height: '682px !important',
-        margin: '-287px 1px 0',
+        margin: '-243px 1px 0',
        },
 
        [theme.breakpoints.only("sm")]: {

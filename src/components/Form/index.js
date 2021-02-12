@@ -17,8 +17,9 @@ import { useTheme } from "@material-ui/core/styles";
 import VIDEO from "../../assets/vido/Emirates Auction.mp4";
 import poster from "../../assets/images/poster.jpg";
 import { DataContext } from "../../context/dataContext";
-import { useMediaQuery} from "@material-ui/core";
+import { useMediaQuery } from "@material-ui/core";
 import { Select, MenuItem, FormControl, InputLabel } from "@material-ui/core";
+import { FormattedMessage, useIntl } from "react-intl";
 
 export default function Form() {
   const classes = makeStyles();
@@ -31,6 +32,8 @@ export default function Form() {
   const [model, setModel] = useState([]);
   const [makes, setMakes] = useState([]);
   const [selectedMakeModels, setSelectedMakeModels] = useState();
+  const [error, setError] = useState(false);
+  const [errors, setErrors] = useState(false);
   console.log(MakeModels);
 
   useEffect(() => {
@@ -53,97 +56,123 @@ export default function Form() {
     console.log(event.target.value);
     setModels(event.target.value);
   };
+  const handleChangeNumber = (event) => {
+    const regExp = /[a-zA-Z]/g;
+    regExp.test(event.target.value) ? setError(true) : setError(false);
+  };
+  const handleChangeName = (event) =>{
+    const regex = /ab+c/;
+    regex.test(event.target.value) ? setErrors(true) : setErrors(false);
+  }
   // <VideoPlayer url={VIDEO} poster={poster} width={400} height={300} autoplay />;
   return (
-    <Grid container  item sm={isSmallScreen ? '6' : '12'} >
-    <Grid  component="main" className={classes.root} item xs={isXSmallScreen ? '12' :'6'}>
-      <Grid xs={12} className={classes.title}>
-        <Typography className={classes.firstTitle}>Start today!</Typography>
-        <Typography className={classes.scondTitle}>
-          You are just one click away from selling your car.
-        </Typography>
-      </Grid>
-
-      <Grid sm={6} xs={12} className={classes.video}>
-        <VideoPlayer
-        
-          url={VIDEO}
-          poster={poster}
-           borderRadius = {15}
-          width={560}
-          height={300}
-          autoplay
-        />
-      </Grid>
-      <Grid sm={6} xs={12}>
-        <div className={classes.paper}>
-         
-          <form className={classes.form} noValidate>
-          <Typography className={classes.details}>
-            Enter your car details
+    <Grid container item sm={isSmallScreen ? "6" : "12"}>
+      <Grid
+        component="main"
+        className={classes.roott}
+        item
+        xs={isXSmallScreen ? "12" : "6"}
+      >
+        <Grid xs={12} className={classes.title}>
+          <Typography className={classes.firstTitle}>    <FormattedMessage id="startToday.title" /> </Typography>
+          <Typography className={classes.scondTitle}>
+          <FormattedMessage id="startToday.subtitle" />
           </Typography>
-            <FormControl className={classes.formControl}>
-              <InputLabel>Car Make</InputLabel>
-              <Select value={selectedMakeModels} onChange={handleMenuItemClick}>
-                {makes.map((MakeModels) => (
-                  <MenuItem value={MakeModels}>{MakeModels}</MenuItem>
-                ))}
-                
-              </Select>
-              
-            </FormControl>
-            <FormControl className={classes.formControl}>
-              <InputLabel>Car Model</InputLabel>
-              
-              <Select
-                value={selectedMakeModels}
-                onChange={handleSelectedMakeModels}
+        </Grid>
+
+        <Grid sm={6} xs={12} className={classes.video}>
+          <VideoPlayer url={VIDEO} poster={poster} borderRadius={15}  />
+          <div className={classes.SellCar}>
+           <Typography className={classes.sellcarwithus}>
+           <FormattedMessage id="startToday.videoSection.first" />
+           </Typography>
+            <Typography className={classes.support}>
+              {" "}
+              <FormattedMessage id="startToday.videoSection.second" />{" "}
+            </Typography>
+            <Typography className={classes.process}>
+            <FormattedMessage id="startToday.videoSection.third" />
+            </Typography>
+            <Typography className={classes.Ready}>
+            <FormattedMessage id="startToday.videoSection.fourth" />
+            </Typography>
+          </div>
+        </Grid>
+        <Grid item sm={isSmallScreen ? "6" : "12"}>
+          <Grid className={classes.paper} item xs={isXSmallScreen ? "12" : "6"}>
+            <form className={classes.form} noValidate>
+              <Typography className={classes.details}>
+              <FormattedMessage id="startToday.formSection.headline" />
+              </Typography>
+              <FormControl className={classes.formControl}>
+                <InputLabel><FormattedMessage id="startToday.formSection.firstLabel" /></InputLabel>
+                <select
+                className={classes.zeinab}
+                  value={selectedMakeModels}
+                  onChange={handleMenuItemClick}
+                  placeholder={<FormattedMessage id="startToday.formSection.SelectBrand" />}
+                >
+                  {makes.map((MakeModels) => (
+                    <option value={MakeModels}>{MakeModels}</option>
+                  ))}
+                </select>
+              </FormControl>
+
+              <FormControl className={classes.formControl}>
+                <InputLabel><FormattedMessage id="startToday.formSection.secondLabel" /></InputLabel>
+
+                <select
+                  className={classes.zeinab}
+                  value={selectedMakeModels}
+                  onChange={handleSelectedMakeModels}
+                //  placeholder= {<FormattedMessage id="startToday.formSection.headline" />}
+                >
+                  {filtered.map((Models) => (
+                    <option value={Models}>{Models}</option>
+                  ))}
+                </select>
+              </FormControl>
+
+              <Typography className={classes.contactInfo}>
+              <FormattedMessage id="startToday.formSection.headline2" />
+              </Typography>
+
+              <TextField
+                error={errors}
+                onChange={(x) => handleChangeName(x)}
+                label= "Your Full Name"
+                id="outlined-error-helper-text"
+                placeholder="Your Full Name"
+                margin="normal"
+                required
+                fullWidth
+                type="text"
+                // helperText="Incorrect entry Your Full Name"
+                variant="outlined"
+              />
+              <TextField
+                error={error}
+                onChange={(e) => handleChangeNumber(e)}
+                id="outlined-error-helper-text"
+                label="Your Phone Number"
+                placeholder="EX: +972 897 564 34"
+                margin="normal"
+                required
+                fullWidth
+                name="Number"
+                // helperText="Incorrect entry Your Phone Number"
+                variant="outlined"
+              />
+              <Button
+                type="submit"
+                variant="contained"
+                className={classes.submit}
               >
-                {filtered.map((Models) => (
-                  <MenuItem value={Models}>{Models}</MenuItem>
-                ))}
-              </Select>
-            </FormControl>
-
-            <Typography>Enter your Contact Info</Typography>
-
-            <TextField
-              variant="outlined"
-              margin="normal"
-              required
-              fullWidth
-              id="Your Full Name"
-              label="Your Full Name"
-              name="Your Full Name"
-              
-            />
-            <TextField
-              variant="outlined"
-              margin="normal"
-              required
-              fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-            />
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            />
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              color="primary"
-              className={classes.submit}
-            >
-              Sign In
-            </Button>
-          </form>
-        </div>
-      </Grid>
+               <FormattedMessage id="startToday.formSection.sendBtn" />
+              </Button>
+            </form>
+          </Grid>
+        </Grid>
       </Grid>
     </Grid>
   );

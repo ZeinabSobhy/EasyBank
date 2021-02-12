@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^12.6.3",
     "axios": "^0.21.1",
     "create-react-context": "^0.3.0",
+    "flab": "^0.6.3",
     "flat": "^5.0.2",
     "hoc": "^1.1.0",
     "react": "^17.0.1",

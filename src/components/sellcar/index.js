@@ -5,6 +5,7 @@ import { Grid } from "@material-ui/core";
 import { useMediaQuery, Button } from "@material-ui/core";
 import SELLCAR from "../../assets/images//sellcar.png";
 import HowItWorks from "../HowItWorks/index";
+import { FormattedMessage } from "react-intl";
 const SellCar = () => {
   const classes = makeStyles();
   const theme = useTheme();
@@ -24,8 +25,8 @@ const SellCar = () => {
             }}
           >
             <Grid className={classes.TextContiner}>
-              <div className={classes.FirstText}>SELLING YOUR CAR NOW</div>
-              <div className={classes.SecondText}>IS EASIER THAN EVER.</div>
+              <div className={classes.FirstText}> <FormattedMessage id="background.title" /></div>
+              <div className={classes.SecondText}><FormattedMessage id="background.subtitle" /></div>
             </Grid>
           </div>
         </Grid>
