@@ -8,6 +8,7 @@ import { Grid } from "@material-ui/core";
 import HowItWorks from '../../components/HowItWorks';
 import Form from '../../components/Form/index';
 import Services from '../../components//Services/index';
+import  Preparedbeforeourcall from '../../components//preparedbeforeourcall/index';
 function Home() {
   const classes = makeStyles();
   const theme = useTheme();
@@ -23,6 +24,7 @@ function Home() {
         <HowItWorks/>
         <Form/>
         <Services/>
+        < Preparedbeforeourcall/>
       
       
     </Grid>
