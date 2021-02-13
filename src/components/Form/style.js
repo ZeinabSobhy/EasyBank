@@ -18,6 +18,10 @@ export default makeStyles((theme) => ({
         marginLeft: '-214px',
         padding:' 50px 0 0 0',
        },
+       [theme.breakpoints.only("sm")]: {
+        padding:' 33px 0 0 300px',
+      
+    }
 
     },
 
@@ -86,17 +90,45 @@ export default makeStyles((theme) => ({
         height: '780px',
         padding: '4px 194px',
         
-        
        },
-    },
+       [theme.breakpoints.only("sm")]: {
+        backgroundColor: '#ffffff',
+        padding: '0 0px 73px 221px',
+        paddingTop: '0px',
+        width:' 560px',
+        height: '330px',
+    }},
       zeinab:{
-        width: '460px',
+        width: '510',
         height: '50px',
-        margin: '49px 0 0',
+        margin: '49px -9px 0',
         padding: '15px 33px 14px 30px',
         borderRadius: '5px',
         border: 'solid 1px #bfc4ce',
         backgroundColor: '#ffffff',
+       },
+       fullname:{
+        width: '154px',
+        height:' 21px',
+        margin: '0 328px -3px 0px',
+        fontFamily: 'inherit',
+        fontSize:' 16px',
+        fontWeight: 'normal',
+        letterSpacing: 'normal',
+        color: '#595f6f',
+
+       },
+       PhoneNumber:{
+        width: '154px',
+        height:' 21px',
+        margin: '0 328px -3px 0px !important',
+        margintop: '20px !important',
+        fontFamily: 'inherit',
+        fontSize:' 16px',
+        fontWeight: 'normal',
+        letterSpacing: 'normal',
+        color: '#595f6f',
+
        },
     sellcarwithus:{
       width: '458px',
@@ -191,9 +223,15 @@ export default makeStyles((theme) => ({
   
     form: {
       width: '510px', 
-     
       marginTop: '-473px',
       paddingLeft: '532px',
+      [theme.breakpoints.down("xs")]: {
+        padding: '261px 6px 0 222px',
+       },
+       [theme.breakpoints.only("sm")]: {
+        marginLeft: '660px',
+      
+    }
       
 
     },

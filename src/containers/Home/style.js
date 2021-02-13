@@ -13,6 +13,7 @@ export default makeStyles((theme) => ({
             padding: '50px 0 100px',
             backgroundColor: '#ffffff',
         },
+        
         [theme.breakpoints.down("sm")]: {
             width: '100%',
         height: '591vh',

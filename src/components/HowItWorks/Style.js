@@ -1,7 +1,8 @@
 import makeStyles from '@material-ui/core/styles/makeStyles';
 export default makeStyles( (theme) => ({
     root:{
-        width: '100% !important',
+        // width: '100% !important',
+        width: '1509px !important',
         height: '93vh',
         padding: '0px 0px 269px 0px !important',
         borderRadius: 'unset !important',

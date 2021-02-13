@@ -18,7 +18,7 @@ const HowItWorks = () => {
     <Grid className={classes.root}>
   <Grid container  item sm={isSmallScreen ? '6' : '12'} spacing={0} >
     <Grid   item xs={isXSmallScreen ? '12' :'6'} >  
-      <Grid item xs={12} sm={6} lg={6} direction="column" container >
+<Grid item xs={12} sm={6} lg={6} direction="column" container >
       
         <div
             className={classes.paper2}
@@ -95,7 +95,7 @@ const HowItWorks = () => {
         </Grid>
         </Grid>
         
-        <Grid xs={12} sm={6} lg={6} spacing={0}>
+      <Grid xs={12} sm={6} lg={6} spacing={0}>
           <Grid direction="column" container>
         
         

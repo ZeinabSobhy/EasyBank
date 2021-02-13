@@ -74,7 +74,9 @@ export default function Form() {
         xs={isXSmallScreen ? "12" : "6"}
       >
         <Grid xs={12} className={classes.title}>
-          <Typography className={classes.firstTitle}>    <FormattedMessage id="startToday.title" /> </Typography>
+          <Typography className={classes.firstTitle}> 
+          <FormattedMessage id="startToday.title" />
+           </Typography>
           <Typography className={classes.scondTitle}>
           <FormattedMessage id="startToday.subtitle" />
           </Typography>
@@ -136,25 +138,29 @@ export default function Form() {
               <Typography className={classes.contactInfo}>
               <FormattedMessage id="startToday.formSection.headline2" />
               </Typography>
+              <Typography className={classes.fullname}>Your Full Name</Typography>
 
               <TextField
+              
                 error={errors}
                 onChange={(x) => handleChangeName(x)}
-                label= "Your Full Name"
+                // label= "Your Full Name"
                 id="outlined-error-helper-text"
-                placeholder="Your Full Name"
+                placeholder="Enter your full name"
                 margin="normal"
                 required
                 fullWidth
                 type="text"
+                
                 // helperText="Incorrect entry Your Full Name"
                 variant="outlined"
               />
+                <Typography className={classes.PhoneNumber}>Your Phone Number</Typography>
               <TextField
                 error={error}
                 onChange={(e) => handleChangeNumber(e)}
                 id="outlined-error-helper-text"
-                label="Your Phone Number"
+                // label="Your Phone Number"
                 placeholder="EX: +972 897 564 34"
                 margin="normal"
                 required

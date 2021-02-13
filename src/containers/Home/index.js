@@ -7,7 +7,7 @@ import { useMediaQuery} from "@material-ui/core";
 import { Grid } from "@material-ui/core";
 import HowItWorks from '../../components/HowItWorks';
 import Form from '../../components/Form/index';
-
+import Services from '../../components//Services/index';
 function Home() {
   const classes = makeStyles();
   const theme = useTheme();
@@ -22,6 +22,8 @@ function Home() {
         <SellCar />
         <HowItWorks/>
         <Form/>
+        <Services/>
+      
       
     </Grid>
   );
