@@ -1,0 +1,309 @@
+@import "../Style/Colors.scss";
+
+.hero {
+  position: relative;
+  background-color: $veryLightGrey;
+  height: 38rem;
+
+  .hero__wrapper {
+    max-width: 1080px;
+    max-height: 100%;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .hero__bg__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -10vh;
+    overflow: hidden;
+
+    .hero__bg {
+      background-image: url(../../assets/images/bg-intro-desktop.svg);
+      background-size: cover;
+      position: absolute;
+      top: -12.5rem;
+      left: 90vh;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+    }
+  }
+  .hero__bg__wrapper2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -10vh;
+    overflow: hidden;
+
+    .hero__bg2 {
+      background-image: url(../../assets/images/bg-intro-desktop.svg);
+      background-size: cover;
+      position: absolute;
+      top: -12.5rem;
+
+      right: 90vh;
+      left: -248px;
+      direction: rtl;
+      bottom: 0;
+      z-index: 0;
+    }
+  }
+  // .hero__bg__wrapper2 {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: -10vh;
+  //   overflow: hidden;
+  //   direction: rtl;
+
+  //   .hero__bg2{
+  //     background-image: url(../../assets/images/bg-intro-desktop.svg);
+  //     background-size: cover;
+  //     position: absolute;
+  //     top: -12.5rem;
+  //     left: 90vh;
+  //     right: 0;
+  //     bottom: 0;
+  //     z-index: 0;
+  //     direction: rtl;
+  //   }
+  // }
+
+  .hero__left {
+    position: relative;
+    flex: 1;
+    padding: 8rem 0;
+
+    .hero__title {
+      font-size: 3.5rem;
+      font-weight: 300;
+      color: $darkBlue;
+      margin-bottom: 1rem;
+    }
+
+    .hero__desc {
+      max-width: 28rem;
+      line-height: 1.5em;
+      font-size: 1.125rem;
+      color: $grayishBlue;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .hero__right {
+    position: relative;
+    max-width: 50vw;
+    flex: 1;
+
+    .hero__phones {
+      position: absolute;
+      z-index: 1;
+      top: -7.5rem;
+      right: -16rem;
+    }
+  }
+
+  .hero__right2 {
+    position: relative;
+    max-width: 50vw;
+    flex: 1;
+
+    .hero__phones2 {
+      position: absolute;
+      z-index: 1;
+      top: -7.5rem;
+      right: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .hero {
+    width: 100vw;
+    overflow: hidden;
+
+    .hero__wrapper {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .hero__bg__wrapper {
+      .hero__bg {
+        background-image: url(../../assets/images/bg-intro-mobile.svg);
+        background-size: cover;
+        top: -22.5rem;
+        left: 0;
+        right: 0rem;
+        bottom: 0;
+      }
+    }
+    //style el loclization in mobile
+    .hero__bg__wrapper2 {
+      .hero__bg2 {
+        background-image: url(../../assets/images/bg-intro-mobile.svg);
+        background-size: cover;
+        top: -22.5rem;
+        left: 0;
+        right: 0rem;
+        bottom: 0;
+      }
+    }
+
+    .hero__left {
+      position: relative;
+      text-align: center;
+      padding: 2rem;
+      margin-top: -2rem;
+
+      .hero__title {
+        font-size: 2rem;
+      }
+
+      .hero__desc {
+        line-height: 1.5em;
+        font-size: 1rem;
+        color: $grayishBlue;
+        margin: 2rem auto;
+      }
+    }
+
+    .hero__right {
+      position: relative;
+      min-width: 90vw;
+      max-height: 50vh;
+      // margin: 0 auto;
+      flex: 1;
+      display: flex;
+
+      .hero__phones {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        right: 0;
+        flex: 1;
+        z-index: 1;
+        margin: -24rem 0 0 0;
+      }
+    }
+
+   //da loclization
+    .hero__right2 {
+      position: relative;
+      min-width: 90vw;
+      max-height: 50vh;
+      margin: 0 auto;
+      flex: 1;
+      display: flex;
+
+      .hero__phones2 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        right: 0;
+        flex: 1;
+        z-index: 1;
+        margin: -23rem 0 0 0;
+      }
+    }
+  }
+
+}
+
+
+
+@media screen and (max-width: 360px) {
+  .hero {
+    width: 100vw;
+    overflow: hidden;
+
+    .hero__wrapper {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .hero__bg__wrapper {
+      .hero__bg {
+        background-image: url(../../assets/images/bg-intro-mobile.svg);
+        background-size: cover;
+        top: -12.5rem;
+        left: 0;
+        right: 0rem;
+        bottom: 0;
+      }
+    }
+    
+    .hero__bg__wrapper2 {
+      .hero__bg2 {
+        background-image: url(../../assets/images/bg-intro-mobile.svg);
+        background-size: cover;
+        top: -12.5rem;
+        left: 0;
+        right: 0rem;
+        bottom: 0;
+      }
+    }
+
+    .hero__left {
+      position: relative;
+      text-align: center;
+      padding: 2rem;
+      margin-top: -2rem;
+
+      .hero__title {
+        font-size: 2rem;
+      }
+
+      .hero__desc {
+        line-height: 1.5em;
+        font-size: 1rem;
+        color: $grayishBlue;
+        margin: 2rem auto;
+      }
+    }
+
+    .hero__right {
+      position: relative;
+      min-width: 90vw;
+      max-height: 50vh;
+      // margin: 0 auto;
+      flex: 1;
+      display: flex;
+
+      .hero__phones {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        right: 0;
+        flex: 1;
+        z-index: 1;
+        margin: 4rem 0 0 0;
+      }
+    }
+
+    // da loclization
+    .hero__right2 {
+      position: relative;
+      min-width: 90vw;
+      max-height: 50vh;
+      margin: 0 auto;
+      flex: 1;
+      display: flex;
+
+      .hero__phones2 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        right: 0;
+        flex: 1;
+        z-index: 1;
+        margin: 4rem 0 0 0;
+      }
+    }
+  }
+
+}

@@ -11,9 +11,10 @@ const LocalizationProvider = ({ children }) => {
   const switchLocale = (key) => {
     console.log("zeze");
     if (key === "en") {
+      document.body.style.direction = "ltr";
       setLocale(enLocale);
     } else {
-    //   document.body.style.direction = "rtl";
+      document.body.style.direction = "rtl";
       setLocale(arLocale);
     }
   };

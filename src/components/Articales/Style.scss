@@ -1,0 +1,84 @@
+@import "../Style/Colors.scss";
+
+.article {
+  padding: 8rem 0;
+  background-color: $veryLightGrey;
+
+  .article__wrapper {
+    max-width: 1080px;
+    margin: auto;
+  }
+
+  .article__title {
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 300;
+      color: $darkBlue;
+    }
+  }
+
+  .article__cards {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .article {
+    padding: 5rem 1rem;
+    text-align: center;
+
+    .article__cards {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+.articleCard {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    border-radius: 0.5rem;
+    max-width: 16rem;
+  
+    .articleCard__img {
+      img {
+        height: 12rem;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 0.25rem 0.25rem 0 0;
+      }
+    }
+  
+    .articleCard__details {
+      padding: 1.25rem;
+      text-align: start;
+  
+      .articleCard__author {
+        color: $grayishBlue;
+        font-size: 0.75rem;
+      }
+  
+      .articleCard__title {
+        display: block;
+        font-size: 1.500rem;
+        margin: 1rem 0;
+        color: $darkBlue;
+      }
+  
+      .articleCard__desc {
+        color: $grayishBlue;
+        font-size: 0.9rem;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 960px) {
+    .articleCard {
+      margin: 2rem auto;
+      max-width: 90vw;
+      text-align: left;
+    }
+  }

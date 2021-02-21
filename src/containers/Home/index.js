@@ -1,34 +1,29 @@
-import React from "react";
-import Header from "../../components/header/index";
-import makeStyles from "./style";
-import { useTheme } from "@material-ui/core/styles";
-import SellCar from "../../components/sellcar/index";
-import { useMediaQuery} from "@material-ui/core";
-import { Grid } from "@material-ui/core";
-import HowItWorks from '../../components/HowItWorks';
-import Form from '../../components/Form/index';
-import Services from '../../components//Services/index';
-import  Preparedbeforeourcall from '../../components//preparedbeforeourcall/index';
+import React from "react"
+import "../Home/Style.scss";
+
+import { ToggleProvider } from "../../context/ToggleContext/index";
+
+import Navbar from "../../components//Navbar/index";
+import Hero from "../../components/Hero.js/index";
+import Benefit from '../../components/Benefit/index';
+import MobileMenu from "../../components//MobileMenu/index";
+import Articles from "../../components/Articales/index"
+import Footer from "../../components//Footer/index";
+
 function Home() {
-  const classes = makeStyles();
-  const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
-  
   return (
-    <Grid   className={classes.homecontenir} style={{
-            width: isSmallScreen && "100%",
-            height: isSmallScreen && "591vh",
-    }}>
-      <Header />
-        <SellCar />
-        <HowItWorks/>
-        <Form/>
-        <Services/>
-        < Preparedbeforeourcall/>
-      
-      
-    </Grid>
-  );
+    <ToggleProvider>
+      <div className="App">
+        <Navbar />
+        <Hero />
+        <MobileMenu />
+        <Benefit/>
+        <Articles/>
+        <Footer/>
+       
+      </div>
+    </ToggleProvider>
+  )
 }
 
-export default Home;
+export default Home

@@ -1,0 +1,85 @@
+@import "../Style/Colors.scss";
+
+.benefit {
+  background-color: $lightGrayishBlue;
+  width: 100vw;
+  padding: 8rem 0;
+
+  .benefit__wrapper {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  .benefit__cards {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .benefit__title {
+    font-size: 2.5rem;
+    font-weight: 100;
+    color: $darkBlue;
+    margin-bottom: 2rem;
+  }
+
+  .benefit__desc {
+    color: $grayishBlue;
+    margin-bottom: 2rem;
+    line-height: 2em;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .benefit {
+    text-align: center;
+    padding: 5rem 1rem;
+
+    .benefit__wrapper {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .benefit__cards {
+      display: block;
+      justify-content: space-between;
+    }
+
+    .benefit__title {
+      font-size: 2.5rem;
+      font-weight: 100;
+      color: $darkBlue;
+      margin-bottom: 2rem;
+    }
+
+    .benefit__desc {
+      color: $grayishBlue;
+      margin-bottom: 2rem;
+      line-height: 2em;
+    }
+  }
+}
+.benefitCard {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    line-height: 1.5em;
+  
+    .benefitCard__title {
+      margin: 2rem 0;
+      font-weight: 300;
+      color: $darkBlue;
+    }
+  
+    .benefitCard__desc {
+      color: $grayishBlue;
+      font-weight: 300;
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    .benefitCard {
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+  }
